@@ -21,6 +21,7 @@ go to http://localhost:9090/q/graphql-ui/
 
 # Querying hottest day:
 
+```
 {
   hottestDayForCoordinates(coordinates:{latitude:50.824955973889,longitude:-0.13878781625840952}){
     dayOfWeek
@@ -31,9 +32,9 @@ go to http://localhost:9090/q/graphql-ui/
     }
   }
 }
-
+```
 # Query Last 7 Days
-
+```
 {
 forcast(coordinates:{latitude:50.824955973889,longitude:-0.13878781625840952})
   {
@@ -49,3 +50,4 @@ forcast(coordinates:{latitude:50.824955973889,longitude:-0.13878781625840952})
     
   }
 }
+```
