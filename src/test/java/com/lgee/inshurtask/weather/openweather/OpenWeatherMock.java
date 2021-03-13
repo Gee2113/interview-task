@@ -20,8 +20,6 @@ public class OpenWeatherMock implements QuarkusTestResourceLifecycleManager
 {
 	private static WireMockServer wireMockServer;
 
-	private String jsonFile;
-
 	@Override
 	public Map<String, String> start()
 	{
@@ -61,13 +59,6 @@ public class OpenWeatherMock implements QuarkusTestResourceLifecycleManager
 		}
 
 		return Collections.singletonMap("open-weather-api/mp-rest/url", wireMockServer.baseUrl());
-	}
-
-	@Override
-	public void init(final Map<String, String> initArgs)
-	{
-		jsonFile = initArgs.get("jsonFile");
-		QuarkusTestResourceLifecycleManager.super.init(initArgs);
 	}
 
 	@Override
